@@ -1,0 +1,370 @@
+
+*{
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+*:focus{
+  outline: 0;
+}
+.hidden{
+  display: none;
+}
+.page{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.painelProgress{
+  position: relative;
+  width: 80%;
+  height: 10%;
+  margin: 2% auto;
+  /* padding-top: 1%; */
+  /* padding:   % auto; */
+  /* overflow: auto; */
+  background: #2ecc71;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#telaPerguntas{
+  background: white;
+}
+#telaLogin{
+background: #2ecc71;
+}
+#telaUsuario{
+  background-color: #f0f0f0;
+}
+#telaCarregamento{
+  background:#2ecc71;
+  z-index: 9999;
+  color: white;
+}
+
+.painel-perguntas{
+  position: relative;
+  width: 80%;
+  /* background: rgba(1,1,1,0.2); */
+  background: white;
+  margin: 2% auto;
+  padding: 3% 5%;
+  color: black;
+  overflow: auto;
+  font-weight: bold;
+  font-size: auto;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.14)
+  /* border-radius: 10px; */
+}
+.painel-respostas{
+  position: relative;
+  width: 80%;
+  /* background: rgba(0,0,0,0.2); */
+  background: white;
+  margin: 4% auto;
+  padding: 3% 5%;
+  color: black;
+  /* box-shadow: 0 20px 60px rgba(0,0,0,0.5); */
+  /* border-radius: 10px; */
+}
+
+.erro{
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 10px 5%;
+  border: 1px solid #ff1000;
+  border-radius: 1px;
+  color: #ff1000;
+}
+.login-logo{
+    width:80%;
+    height:auto;
+}
+.navbar{
+  background: #27ae60;
+  width: 100%;
+  height: 55px;
+  text-align: center;
+}
+.navbar span {
+  font-size: 17px;
+  line-height: 55px;
+  color: white;
+  text-transform: uppercase;
+  border-bottom: 2px solid orangened;
+}
+.btnFooter{
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  padding: 15px 0px;
+  font-weight: bold;
+  text-align: center;
+  background: #222;
+  color: white;
+  bottom: 0;
+  border: 0;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.lista{
+  list-style-type: none;
+  padding: 0;
+}
+.item-lista{
+  display: block;
+  padding-top: 10%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #bbb;
+  margin-left: 5px;
+  font-weight: normal;
+
+}
+.conteudo{
+  overflow: auto;
+}
+.painel-login{
+  width: 85%;
+  background: rgba(1,1,1,0.12);
+  margin: 15% auto;
+  padding: 1% 5%;
+}
+.form-login{
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 10px 5%;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+.form-select{
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 5%;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  text-transform: uppercase;
+  -webkit-appearance: none;  /* Remove estilo padrão do Chrome */
+  -moz-appearance: none; /* Remove estilo padrão do FireFox */
+  appearance: none; /* Remove estilo padrão do FireFox*/
+  color: gray;
+  overflow: hidden;
+}
+
+.login-header{
+  text-align: center;
+  margin-bottom: 5px;
+}
+.painel-btn{
+  width: auto;
+}
+.btn{
+  width: 100%;
+  padding: 10px 10px;
+  margin-bottom: 5px;
+  border: 0;
+  text-transform: uppercase;
+}
+.btn-primary{
+  background: #0383C5;
+  color: white;
+}
+.btn-success{
+  background: #069040;
+  color: white;
+}
+.img-load{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+.msg-final-titulo{
+    position: relative;
+    width: 80%;
+    height: inherit;
+    background: rgba(0,0,0,0.2);
+    margin: 2% auto;
+    padding: 3% 5%;
+    color: black;
+    overflow: auto;
+    font-weight: bold;
+    /* box-shadow: 0 20px 60px rgba(0,0,0,0.5); */
+    /* border-radius: 10px; */
+
+}
+
+
+.resultado{
+    background: rgba(0,0,0,0.04);
+    text-align: center;
+    justify-content: center;
+}
+
+
+.painel-resultado-titulo{
+    position: relative;
+    height: 10%;
+    width: 80%;
+    background-color: #FAFAFA;
+    margin: 5% auto;
+    padding: 3% 5%;
+    color: black;
+    overflow: auto;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+    border-radius: 5px; 
+
+}
+.painel-resultado{
+    position: relative;
+    height: 45%;
+    width: 80%;
+    margin: 4% auto;
+    padding: 3% 5%;
+    color: black; 
+    text-align: center;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+}
+
+.resultado-logo{
+    align-content: center;
+}
+
+.logo{
+    width:50%;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  height: 20%;
+  margin-top: -10%;
+  padding: 4%;
+  padding-top: 30%;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  text-align: center;
+  z-index:1000;
+  background-color: rgba(0,0,0,0.1);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-top: 2%;
+    padding-left: 15%;
+    margin-bottom: 5%;
+    cursor: pointer;
+    font-size: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: gray;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+.painelProgress .dot{
+
+}
+.dot {
+  position: relative;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  /* margin: 0 1% */
+  /* margin-top: 2.5%; */
+  /* margin-bottom: 2.5%; */
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.selecionado{
+    background-color: #cdcfd3;
+}
+
+.active, .dot:hover {
+  background-color: #eaecef;
+}

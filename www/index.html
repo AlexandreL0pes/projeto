@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+      <div id="telaLogin" class="page">
+        <div class="painel-login">
+          <div class="login-header">
+            <img src="img/logoIF.png" class="login-logo" alt="" style="">
+          </div>
+          <input type="text" class="form-login input-nome" id="nome"  placeholder="NOME COMPLETO">
+          <select class="form-select select-escola" id="escola">
+            <option value="">Selecione sua Escola</option>
+            <option value="Escola 1">Escola 1</option>
+            <option value="Escola 2">Escola 2</option>
+            <option value="Escola 3">Escola 3</option>
+            <option value="Escola 4">Escola 4</option>
+          </select>
+          <div class="erro hidden">
+            Por Favor, preencha os campos corretamente!
+          </div>
+          <div class="painel-btn">
+            <button class="btn btn-primary targetPage" dt-page="#telaPerguntas">Começar</button>
+            <div class="separator">
+            </div>
+            <button class="btn btn-success">Ver Resultado</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="telaCarregamento" class="page hidden">
+          <img src="img/load.gif" class="img-load">
+      </div>
+
+      <div id="telaPerguntas" class= "page hidden" >
+        <a class="hidden prev" onclick="voltar()">&#10094;</a>
+        <a class="next" onclick="avancar()">&#10095;</a>
+
+        <div class="painelProgress">
+          <div style="">
+            <span class="dot selecionado" num="0"></span>
+            <span class="dot" num="1"></span>
+            <span class="dot" num="2"></span>
+            <span class="dot" num="3"></span>
+            <span class="dot" num="4"></span>
+            <span class="dot" num="5"></span>
+            <span class="dot" num="6"></span>
+            <span class="dot" num="7"></span>
+          </div>
+        </div>
+
+        <form id="form1">
+        
+            <!--Usar um numero, e a difereca entre eles sera a class da pergunta perto do id-->
+            <div class="perguntas" id="0">
+                <!--Pergunta-->
+                        <div class="painel-perguntas">
+                            Na escola, qual matéria você mais admira?
+                        </div>
+                <!--Pergunta-->
+                <!--Respostas-->
+                        <div class="painel-respostas">
+                          <div class="conteudo">
+                            <ul class="lista">
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas0" value="3">
+                                  <span class="checkmark"></span>
+                                  Geografia/História.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas0" value="1">
+                                  <span class="checkmark"></span>
+                                  Matemática e Física.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas0" value="2">
+                                  <span class="checkmark"></span>
+                                  Biologia/Química.
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+
+                        </div>
+                <!--Respostas-->
+            </div>
+
+            <div class="perguntas hidden" id="1">
+                <!--Pergunta-->
+                        <div class="painel-perguntas">
+                            Qual o estilo de vida que quer levar?
+                        </div>
+                <!--Pergunta-->
+                <!--Respostas-->
+                        <div class="painel-respostas">
+                          <div class="conteudo">
+                            <ul class="lista">
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas1" value="2">
+                                  <span class="checkmark"></span>
+                                  Pouca rotina e improvisando.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas1" value="3">
+                                  <span class="checkmark"></span>
+                                  Interagindo com o meio ambiente.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas1" value="1">
+                                  <span class="checkmark"></span>
+                                  Trabalhar com mais interação com pessoas.
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+
+                        </div>
+                <!--Respostas-->
+            </div>
+
+            <div class="perguntas hidden" id="2">
+                <!--Pergunta-->
+                        <div class="painel-perguntas">
+                            Você se considera uma pessoa?
+                        </div>
+                <!--Pergunta-->
+                <!--Respostas-->
+                        <div class="painel-respostas">
+                          <div class="conteudo">
+                            <ul class="lista">
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas2" value="1">
+                                  <span class="checkmark"></span>
+                                  Paciente quando o assunto é uma reunião para assuntos sérios.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas2" value="3">
+                                  <span class="checkmark"></span>
+                                  Se identifica mais com animais/meio ambiente em vez de seres humanos.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas2" value="2">
+                                  <span class="checkmark"></span>
+                                  Gosta de rotina e uma vida programada.
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+
+                        </div>
+                <!--Respostas-->
+            </div>
+
+            <div class="perguntas hidden" id="3">
+                <!--Pergunta-->
+                        <div class="painel-perguntas">
+                            Quase sempre, você gosta de:
+                        </div>
+                <!--Pergunta-->
+                <!--Respostas-->
+                        <div class="painel-respostas">
+                          <div class="conteudo">
+                            <ul class="lista">
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas3" value="3">
+                                  <span class="checkmark"></span>
+                                  Ler um livro de curiosidades ou passar o dia descobrindo coisas novas.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas3" value="1">
+                                  <span class="checkmark"></span>
+                                  Jogar algum jogo com os amigos ou mesmo sozinho.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas3" value="2">
+                                  <span class="checkmark"></span>
+                                  Passar o dia no campo.
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+
+                        </div>
+                <!--Respostas-->
+            </div>
+
+            <div class="perguntas hidden" id="4">
+                <!--Pergunta-->
+                        <div class="painel-perguntas">
+                            O que é mais estimulante para você em uma profissão?
+                        </div>
+                <!--Pergunta-->
+                <!--Respostas-->
+                        <div class="painel-respostas">
+                          <div class="conteudo">
+                            <ul class="lista">
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas4" value="3">
+                                  <span class="checkmark"></span>
+                                  Estar em contato com a natureza e com os animais.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas4" value="1">
+                                  <span class="checkmark"></span>
+                                  Poder ajudar o mundo por meio da tecnologia.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas4" value="2">
+                                  <span class="checkmark"></span>
+                                  Realizar estudos, para ter mais conhecimento e retorno para a sociedade.
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+
+                        </div>
+                <!--Respostas-->
+            </div>
+
+            <div class="perguntas hidden" id="5">
+                <!--Pergunta-->
+                        <div class="painel-perguntas">
+                            Onde gostaria de trabalhar?
+                        </div>
+                <!--Pergunta-->
+                <!--Respostas-->
+                        <div class="painel-respostas">
+                          <div class="conteudo">
+                            <ul class="lista">
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas5" value="2">
+                                  <span class="checkmark"></span>
+                                  Campo.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas5" value="1">
+                                  <span class="checkmark"></span>
+                                  Escritório.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas5" value="3">
+                                  <span class="checkmark"></span>
+                                  Instituição de pesquisa.
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+
+                        </div>
+                <!--Respostas-->
+            </div>
+
+            <div class="perguntas hidden" id="6">
+                <!--Pergunta-->
+                        <div class="painel-perguntas">
+                            Diante de notícias em sites, redes sociais ou televisão, qual chama mais a sua atenção:
+                        </div>
+                <!--Pergunta-->
+                <!--Respostas-->
+                        <div class="painel-respostas">
+                          <div class="conteudo">
+                            <ul class="lista">
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas6" value="2">
+                                  <span class="checkmark"></span>
+                                  Brasil atingindo recordes de plantação de soja.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas6" value="3">
+                                  <span class="checkmark"></span>
+                                  Animais sendo salvos por instituições não-governamentais.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas6" value="1">
+                                  <span class="checkmark"></span>
+                                  Tecnologia sendo usada para a segurança pública.
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+
+                        </div>
+                <!--Respostas-->
+            </div>
+
+            <div class="perguntas hidden" id="7">
+                <!--Pergunta-->
+                        <div class="painel-perguntas">
+                            Você é muito bom lidando com:
+                        </div>
+                <!--Pergunta-->
+                <!--Respostas-->
+                        <div class="painel-respostas">
+                          <div class="conteudo">
+                            <ul class="lista">
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas7" value="2">
+                                  <span class="checkmark"></span>
+                                  Ferramentas, instrumentos.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas7" value="1">
+                                  <span class="checkmark"></span>
+                                  Controle do seu tempo, comandar.
+                                </label>
+                              </li>
+                              <li class="item-lista">
+                                <label class="container">
+                                  <input type="radio" name="respostas7" value="3">
+                                  <span class="checkmark"></span>
+                                  Pessoas em todos os níveis sócio-culturais.
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+
+                        </div>
+                <!--Respostas-->
+                </div>
+
+        </form>
+        </div>
+
+      
+        <div id="telaResultadoInfo" class="page hidden resultado ">
+             
+                <div class="painel-resultado-titulo">
+                    Técnico em Informática para Internet
+                 </div>
+                <div class="resultado-logo">
+                    <img class="logo" src="img/info.svg">
+                </div>
+                
+                <div class="painel-resultado">
+                    Parabéns, com referência a suas respostas o curso selecionado para você é o técnico em informática. Com uma vasta área no mercado de trabalho e com o crescimento constante da área de informática. Precisando cada vez mais de profissionais capacitados.
+                </div>  
+        </div>
+        <div id="telaResultadoAgro" class="page hidden resultado">
+                <div class="painel-resultado-titulo">
+                    Técnico em Agropecuária
+                 </div>
+                <div class="resultado-logo">
+                    <img class="logo" src="img/agro.svg">
+                </div>
+                 <div class="painel-resultado">
+                    Parabéns, com referência a suas respostas o curso selecionado para você é o técnico em Agropecuária. Com uma vasta área no mercado de trabalho e com o crescimento constante da área de gado, colheitas e plantações. Precisando cada vez mais de profissionais capacitados para essa área.
+                </div>  
+        </div>
+        <div id="telaResultadoMeio" class="page hidden  resultado">
+            <div class="painel-resultado-titulo">
+                Técnico em Meio Ambiente
+             </div>
+            <div class="resultado-logo">
+                <img class="logo" src="img/meio.svg">
+            </div>
+             <div class="painel-resultado">
+                Parabéns, com referência a suas respostas o curso selecionado para você é o técnico em meio ambiente. Com uma vasta área no mercado de trabalho e com o crescimento constante da área de referência a preservação de fauna e flora. Precisando cada vez mais de profissionais capacitados.
+             </div>
+        </div>  
+        <div class="footer hidden">
+            <button class="btnFooter hidden" dt-page="#telaResultado">
+                Finalizar o Teste!
+            </button>  
+        </div>
+          
+    </body>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/movimentacao.js"></script>
+</html>
